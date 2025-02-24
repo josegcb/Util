@@ -1,0 +1,41 @@
+﻿<Window x:Class="GalacCloud_2_0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GalacCloud_2_0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Crear Cliente" HorizontalAlignment="Left" Margin="64,273,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="CrearCliente_Click"/>
+        <Button Content="Crear Estructura" HorizontalAlignment="Left" Margin="164,273,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="CrearEstructura_Click"/>
+        <Button Content="Crear Grupo" HorizontalAlignment="Left" Margin="264,273,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="CrearGrupo_Click"/>
+        <Button Content="Crear Usuarios" HorizontalAlignment="Left" Margin="364,273,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="CrearUsuario_Click"/>
+        <Button Content="Asignar Userio" HorizontalAlignment="Left" Margin="464,273,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="AsignarUsuario_Click"/>
+        <Button Content="Crear DB" HorizontalAlignment="Left" Margin="64,324,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="CrearDB_Click" />
+        <Button Content="Crear Usr SQL" HorizontalAlignment="Left" Margin="166,324,0,0" VerticalAlignment="Top" Height="35" Width="90"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="64,373,0,0" VerticalAlignment="Top" Height="35" Width="90"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="164,373,0,0" VerticalAlignment="Top" Height="35" Width="90"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="264,373,0,0" VerticalAlignment="Top" Height="35" Width="90"/>
+        <Label Content="Dominio" HorizontalAlignment="Left" Height="29" Margin="34,10,0,0" VerticalAlignment="Top" Width="61"/>
+        <Label Content="lblDominio" HorizontalAlignment="Left" Height="29" Margin="134,10,0,0" VerticalAlignment="Top" Width="143" Name="lblDominio"/>
+        <Label Content="Cliente" HorizontalAlignment="Left" Height="29" Margin="34,40,0,0" VerticalAlignment="Top" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="134,40,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245" Name="txtCliente"/>
+        <Label Content="Rif" HorizontalAlignment="Left" Height="29" Margin="34,70,0,0" VerticalAlignment="Top" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="134,75,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245" x:Name="txtRif"/>
+        <Label Content="Producto" HorizontalAlignment="Left" Height="29" Margin="34,110,0,0" VerticalAlignment="Top" Width="61"/>
+        <ComboBox HorizontalAlignment="Left" Margin="134,110,0,0" VerticalAlignment="Top" Width="245" Name="cmbProducto" >
+            <ComboBoxItem Content="SAW"/>
+            <ComboBoxItem Content="IVA"/>
+            <ComboBoxItem Content="WCO"/>
+            <ComboBoxItem Content="NOM"/>
+        </ComboBox>
+        <Label Content="Usuarios" HorizontalAlignment="Left" Height="29" Margin="34,140,0,0" VerticalAlignment="Top" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="134,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245" x:Name="txtCantidad"/>
+
+        <Label Content="Servidor SQL" HorizontalAlignment="Left" Height="29" Margin="34,175,0,0" VerticalAlignment="Top" Width="87"/>
+        <ComboBox HorizontalAlignment="Left" Margin="134,175,0,0" VerticalAlignment="Top" Width="245" x:Name="cbServidores" />
+        <Button Content="Iniciar" HorizontalAlignment="Left" Margin="64,217,0,0" VerticalAlignment="Top" Height="38" Width="90" Click="Iniciar_Click"/>
+
+    </Grid>
+</Window>

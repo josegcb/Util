@@ -1,0 +1,160 @@
+﻿<Window
+    x:Class="WpfApp5.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp5"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="460"
+    mc:Ignorable="d">
+    <Grid>
+        <Label
+            Width="61"
+            Height="29"
+            Margin="34,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Dominio" />
+        <Label
+            Name="lblDominio"
+            Width="143"
+            Height="29"
+            Margin="134,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="lblDominio" />
+        <Label
+            Width="61"
+            Height="29"
+            Margin="34,40,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Ruta Mdf" />
+        <Label
+            x:Name="lblmdf"
+            Width="613"
+            Height="29"
+            Margin="134,40,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="lblmdf" />
+
+        <Label
+            Width="61"
+            Height="29"
+            Margin="34,70,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Ruta ldf" />
+        <Label
+            x:Name="lblldf"
+            Width="613"
+            Height="29"
+            Margin="134,70,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="lblldf" />
+
+        <Label
+            Width="61"
+            Height="29"
+            Margin="32,106,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Cliente" />
+        <TextBox
+            Name="txtCliente"
+            Width="245"
+            Height="29"
+            Margin="132,106,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text=""
+            TextWrapping="Wrap" />
+        <Label
+            Width="61"
+            Height="29"
+            Margin="32,136,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Rif" />
+        <TextBox
+            x:Name="txtRif"
+            Width="245"
+            Height="29"
+            Margin="132,141,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text=""
+            TextWrapping="Wrap" />
+        <Label
+            Width="61"
+            Height="29"
+            Margin="32,176,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Producto" />
+        <ComboBox
+            Name="cmbProducto"
+            Width="245"
+            Margin="132,176,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Label
+            Width="61"
+            Height="29"
+            Margin="32,207,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Usuarios" />
+        <TextBox
+            x:Name="txtCantidad"
+            Width="245"
+            Height="29"
+            Margin="132,207,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text=""
+            TextWrapping="Wrap" />
+
+        <Label
+            Width="87"
+            Height="29"
+            Margin="32,241,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Servidor SQL" />
+        <ComboBox
+            x:Name="cmbServidores"
+            Width="245"
+            Margin="132,240,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
+        <Button
+            Width="90"
+            Height="38"
+            Margin="62,358,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Iniciar_Click"
+            Content="Iniciar" />
+        <ListBox x:Name="UserListBox" SelectionMode="Multiple" Margin="400,106,10,122"/>
+        <Button
+            Width="90"
+            Height="38"
+            Margin="400,358,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Listar" Click="Listar_Click" />
+        <Button
+            Width="90"
+            Height="38"
+            Margin="514,358,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Eliminar" Click="Eliminar_Click" />
+
+    </Grid>
+</Window>

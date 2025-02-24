@@ -1,0 +1,35 @@
+# Ignorar archivos de compilación y ejecución
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# Ignorar archivos de usuario y configuración de VS
+*.user
+*.suo
+*.userprefs
+*.vs/
+
+# Ignorar archivos de paquetes NuGet
+packages/
+*.nupkg
+.nuget/
+
+# Ignorar archivos de logs y resultados de pruebas
+TestResults/
+*.log
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+# Ignorar archivos de Azure
+*.azurePubxml
+
+# Ignorar archivos de MSTest
+*.Test.xml
+
+# Ignorar archivos de Node.js (si usas Node.js en tu proyecto)
+node_modules/
