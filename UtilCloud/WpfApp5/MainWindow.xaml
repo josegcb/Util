@@ -140,7 +140,14 @@
             VerticalAlignment="Top"
             Click="Iniciar_Click"
             Content="Iniciar" />
-        <ListBox x:Name="UserListBox" SelectionMode="Multiple" Margin="400,106,10,122"/>
+        <ListView  x:Name="UserListBox" SelectionMode="Multiple" Margin="400,106,10,122">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Usuario" DisplayMemberBinding="{Binding sAMAccountName}" Width="250" />
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding userAccountControl}"  Width="80"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
         <Button
             Width="90"
             Height="38"

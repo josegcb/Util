@@ -647,8 +647,13 @@ namespace WpfApp5 {
                         searcher.SearchScope = SearchScope.OneLevel;
                         SearchResultCollection results = searcher.FindAll();
                         foreach (SearchResult result in results) {                            
-                            if (result.Properties["sn"][0].ToString() == Producto) {                              
-                                UserListBox.Items.Add(result.Properties["sAMAccountName"][0].ToString());
+                            if (result.Properties["sn"][0].ToString() == Producto) {
+                                var user = new {
+                                    sAMAccountName = result.Properties["sAMAccountName"][0].ToString(),
+                                    userAccountControl = result.Properties["userAccountControl"][0].ToString() == "66082" ? "Desactivado" : "Activo"
+                                };
+                                UserListBox.Items.Add(user);
+                                //UserListBox.Items.Add(result.Properties["sAMAccountName"][0].ToString());
                             }
                         }
                     }
