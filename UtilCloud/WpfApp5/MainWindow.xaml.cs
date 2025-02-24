@@ -648,9 +648,11 @@ namespace WpfApp5 {
                         SearchResultCollection results = searcher.FindAll();
                         foreach (SearchResult result in results) {                            
                             if (result.Properties["sn"][0].ToString() == Producto) {
-                                var user = new {
+                                var user = new CuentaUSuario {
                                     sAMAccountName = result.Properties["sAMAccountName"][0].ToString(),
-                                    userAccountControl = result.Properties["userAccountControl"][0].ToString() == "66082" ? "Desactivado" : "Activo"
+                                    userAccountControl = result.Properties["userAccountControl"][0].ToString() == "66080" ||
+                                    result.Properties["userAccountControl"][0].ToString() == "512"
+                                    ? "Activo" : "Desactivado"
                                 };
                                 UserListBox.Items.Add(user);
                                 //UserListBox.Items.Add(result.Properties["sAMAccountName"][0].ToString());
@@ -665,8 +667,10 @@ namespace WpfApp5 {
 
         private void Eliminar() {
             try {
-                foreach (var selectedUser in UserListBox.SelectedItems) {                    
-                    string userDN = $"CN={selectedUser.ToString()},OU=Usuarios,OU={Rif},{ClientesOU},{DominioOU}";
+                foreach (var selectedUser in UserListBox.SelectedItems) {
+                    CuentaUSuario usuarioSeleccionado = selectedUser as CuentaUSuario;
+                    string userDN = $"CN={usuarioSeleccionado.sAMAccountName},OU=Usuarios,OU={Rif},{ClientesOU},{DominioOU}";
+                    MessageBox.Show(userDN);
                     using (DirectoryEntry userEntry = new DirectoryEntry($"LDAP://{userDN}")) {                        
                         userEntry.Properties["userAccountControl"].Value = 0x0202;
                         userEntry.CommitChanges();

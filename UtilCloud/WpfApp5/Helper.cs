@@ -150,6 +150,11 @@ namespace WpfApp5 {
         public string Password { get; set; }
 
     }
+
+    public class CuentaUSuario {
+        public string sAMAccountName { get; set; }
+        public string userAccountControl { get; set; }
+    }
 }
 
 
